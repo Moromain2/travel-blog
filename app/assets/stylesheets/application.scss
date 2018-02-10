@@ -1,0 +1,123 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/* === FONTS === */
+
+@font-face {
+    font-family: 'Mission Script';
+    src: url('Mission-Script.woff') format('woff');
+}
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700');
+
+$f-title: 'Mission Script', sans-serif;
+$f-text: 'Nunito', sans-serif;
+
+/* === COLORS === */
+ $black: #414141;
+ $blue: #4330D8;
+ $light-blue: #E9F4F2;
+ $purple: #968AF7;
+ $white: #FFFFFF;
+
+ body {
+   background-color: $light-blue;
+   padding: 50px 200px;
+ }
+
+ h1 {
+   font-family: $f-title;
+   letter-spacing: .07em;
+   color: $black;
+   text-align: center;
+ }
+
+ form {
+   margin: 30px 0px;
+ }
+
+ #post_title {
+   width: 100%;
+   margin-bottom: 22px;
+   border: 2px solid $purple;
+   border-radius: 2px;
+   font-family: $f-text;
+   padding: 15px;
+   font-weight: 400;
+   font-size: 1.4em;
+ }
+
+ #post_content {
+   width: 100%;
+   height: 250px;
+   border: 2px solid $purple;
+   border-radius: 2px;
+   font-family: $f-text;
+   padding: 15px;
+   font-weight: 400;
+   font-size: 1.4em;
+ }
+
+ #post_content:focus {
+   border: 2px solid $blue;
+   outline: none;
+ }
+
+ #post_title:focus {
+   border: 2px solid $blue;
+   outline: none;
+ }
+
+ label {
+   font-family: $f-text;
+   margin-bottom: 8px;
+   display: inline-block;
+   font-weight: 600;
+ }
+
+ .action-btn {
+   font-family: $f-text;
+   font-weight: 600;
+   font-size: 1.2em;
+   border: 2px solid $purple;
+   color: $purple;
+   border-radius: 2px;
+   box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+   padding: 5px 15px;
+   background-color: $white;
+   transition: all ease-out 300ms;
+   cursor: pointer;
+   text-decoration: none;
+   margin-left: 20px;
+ }
+
+ .no-margin {
+   margin: 0;
+ }
+
+ .action-btn:hover {
+   border: 2px solid $purple;
+   color: $white;
+   box-shadow: 0 1px 3px rgba(44, 35, 35, 0.3);
+   background-color: $purple;
+ }
+
+ p {
+   margin: 50px 0px;
+   font-family: $f-text;
+   font-weight: 300;
+   font-size: 1.5em;
+ }
