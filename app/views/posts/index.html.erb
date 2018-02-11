@@ -1,1 +1,17 @@
-<h1>El Romdu</h1>
+<%= render 'navbar' %>
+
+<div class="page-container">
+
+  <h1>El Romdu</h1>
+
+  <% @posts.each do |post| %>
+    <div class="post-card">
+      <h3><%= post.title %></h3>
+      <%= image_tag post.image.url(:medium) %>
+      <p class="post-summary"><%= post.content.first(200) %></p>
+      <p class="date"><span>Publié le :</span> <%= post.created_at.strftime("%A, %b %d") %></p>
+      <%= link_to 'Lire', post, :class => 'action-btn no-margin' %>
+    </div>
+  <% end %>
+
+</div>
