@@ -1,0 +1,32 @@
+<style media="screen">
+  .hero-section { background-image: url(<%= @latest_post.image %>); }
+</style>
+
+<%= render 'navbar' %>
+
+<div class="page-container">
+
+  <h2>Dernier article</h2>
+  <div class="decor-line"></div>
+
+  <div class="container-fluid">
+    <div class="col-lg-12 col-xs-12 hero-section">
+      <h3><%= link_to @latest_post.title, @latest_post %></h3>
+      <ul>
+        <li class="tag">Voyage</li>
+        <li class="tag">Ville</li>
+        <li class="tag">Goald Coast</li>
+      </ul>
+      <div class="decor-line"></div>
+      <p class="date"><%= @latest_post.created_at.strftime("%A, %b %d") %></p>
+    </div>
+  </div>
+
+  <h2>Articles précédents</h2>
+  <div class="decor-line"></div>
+
+  <%= render 'posts' %>
+
+</div>
+
+<%= render 'footer' %>

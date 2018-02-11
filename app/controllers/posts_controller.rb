@@ -1,6 +1,11 @@
 class PostsController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy]
 
+  def welcome
+    @posts = Post.all.order("created_at desc")
+    @latest_post = Post.last
+  end
+
   def index
     @posts = Post.all.order("created_at desc")
   end
