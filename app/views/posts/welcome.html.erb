@@ -4,7 +4,7 @@
 
 <%= render 'navbar' %>
 
-<div class="page-container">
+<div class="page-container welcome">
 
   <h2>Dernier article</h2>
   <div class="decor-line"></div>
@@ -26,6 +26,8 @@
   <div class="decor-line"></div>
 
   <%= render 'posts' %>
+
+  <%= link_to 'Voir tous les articles', posts_path, :class => 'action-btn welcome-action-btn' %>
 
 </div>
 

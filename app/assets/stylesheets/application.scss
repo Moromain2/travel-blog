@@ -20,21 +20,16 @@
 
 /* === FONTS === */
 
-@font-face {
-    font-family: 'Mission Script';
-    src: url('Mission-Script.woff') format('woff');
-}
-
+@import url('https://fonts.googleapis.com/css?family=Baloo');
 @import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700');
 
-$f-title: 'Mission Script', sans-serif;
+$f-title: 'Baloo', sans-serif;
 $f-text: 'Nunito', sans-serif;
 
 /* === COLORS === */
  $black: #414141;
  $blue: #4330D8;
- $light-blue: #E9F4F2;
- $purple: #968AF7;
+ $light-blue: #DBE6E4;
  $white: #FFFFFF;
 
  body,
@@ -45,23 +40,30 @@ $f-text: 'Nunito', sans-serif;
  }
 
  .page-container {
-      padding: 50px 50px;
+      padding: 70px 100px;
  }
 
+.row {
+  margin-top: -10px;
+}
  .decor-line {
    height: 5px;
    width: 50px;
    border-radius: 50px;
-   background-color: $purple;
-   margin-bottom: 45px;
+   background-color: $blue;
+   margin-bottom: 20px;
    margin-left: 5px;
  }
 
 .head-title {
   h1 {
-    font-size: 3em;
+    font-size: 2.7em;
     float: left;
     margin: 20px;
+    a {
+      color: $black;
+      text-decoration: none;
+    }
   }
   .decor-line {
     height: 3px;
@@ -75,7 +77,7 @@ $f-text: 'Nunito', sans-serif;
  nav {
    clear: both;
    width: 100%;
-   background-color: $purple;
+   background-color: $black;
    height: 40px;
    z-index: 1;
    .nav-link {
@@ -95,7 +97,7 @@ $f-text: 'Nunito', sans-serif;
      margin-left: 0;
    }
    .nav-links {
-     width: 100%;
+     margin: auto;
    }
  }
 
@@ -113,7 +115,7 @@ $f-text: 'Nunito', sans-serif;
  #post_content {
    width: 100%;
    margin-bottom: 22px;
-   border: 2px solid $purple;
+   border: 2px solid $blue;
    border-radius: 2px;
    font-family: $f-text;
    padding: 10px;
@@ -142,16 +144,25 @@ $f-text: 'Nunito', sans-serif;
    font-family: $f-text;
    font-weight: 600;
    font-size: 1.2em;
-   border: 2px solid $purple;
-   color: $purple;
+   border: 2px solid $blue;
+   color: $blue;
    border-radius: 2px;
    padding: 5px 15px;
-   background-color: $white;
    transition: all ease-out 300ms;
    cursor: pointer;
    text-decoration: none;
    margin-left: 20px;
    display: inline-block;
+ }
+
+ .welcome-action-btn {
+   border-radius: 50px;
+   text-decoration: none;
+   display: block;
+   margin: auto;
+   width: 230px;
+   text-align: center;
+   margin-top: 30px;
  }
 
  input[type="file"] {
@@ -167,10 +178,11 @@ $f-text: 'Nunito', sans-serif;
  }
 
  .action-btn:hover {
-   border: 2px solid $purple;
+   border: 2px solid $blue;
    color: $white;
    box-shadow: 0 1px 3px rgba(44, 35, 35, 0.3);
-   background-color: $purple;
+   background-color: $blue;
+   text-decoration: none;
  }
 
  p {
@@ -181,7 +193,7 @@ $f-text: 'Nunito', sans-serif;
 
  h3 {
    font-family: $f-title;
-   font-size: 1.625em;
+   font-size: 1.2em;
    margin: 0;
    margin-top: 35px;
    a {
@@ -205,10 +217,10 @@ $f-text: 'Nunito', sans-serif;
  }
 
  h2 {
-   margin: 0 auto 2px;
+   margin: 0 auto 3px;
    font-family: $f-text;
    color: $black;
-   font-size: 1.7em;
+   font-size: 1.4em;
  }
 
  .post-card {
@@ -245,8 +257,8 @@ $f-text: 'Nunito', sans-serif;
 
 .article-view {
   h1 {
-    font-size: 3.5em;
-    margin: 63px auto 40px;
+    font-size: 2.5em;
+    margin: 0 auto 20px;
   }
   img {
     margin: 0 auto 60px;
@@ -254,6 +266,9 @@ $f-text: 'Nunito', sans-serif;
   }
   p {
     margin: 0 auto 100px;
+  }
+  a {
+    text-decoration: none;
   }
 }
 
@@ -281,12 +296,15 @@ footer {
   background-size: cover;
   height: 400px;
   padding: 50px;
-  margin: 0 0 100px;
+  margin: 0 0 70px;
   -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.4);
   -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.4);
   box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.4);
+  .date {
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.95);
+  }
   h3  a {
-    font-size: 2em;
+    font-size: 1.65em;
     color: $white;
     text-shadow: 0 1px 4px #000000;
     text-decoration: none;
