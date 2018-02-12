@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy]
 
   def welcome
-    @posts = Post.all.order("created_at desc")
+    @posts = Post.all.order("created_at desc").offset(1)
     @latest_post = Post.last
   end
 
