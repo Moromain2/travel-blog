@@ -5,7 +5,23 @@
   <h2>Tous les articles</h2>
   <div class="decor-line"></div>
 
-  <%= render 'posts' %>
+  <div class="row">
+
+    <% @posts.each do |post| %>
+
+          <div class="col-lg-4 col-md-6 col-sm-12 post-card">
+            <div class="image-crop">
+              <%= image_tag post.image.url(:medium) %>
+            </div>
+            <h3><%= post.title.first(35) %></h3>
+            <p class="post-summary"><%= post.content.first(200) %>...</p>
+            <p class="date"><span>Publié le :</span> <%= post.created_at.strftime("%A, %b %d") %></p>
+            <%= link_to 'Lire', post, :class => 'action-btn no-margin' %>
+          </div>
+
+    <% end %>
+
+  </div>
 
 </div>
 
