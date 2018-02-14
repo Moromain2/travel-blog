@@ -56,6 +56,8 @@ $f-text: 'Nunito', sans-serif;
  }
 
 .head-title {
+  display: flex;
+  justify-content: center;
   clear: both;
   h1 {
     font-size: 2.7em;
@@ -68,7 +70,7 @@ $f-text: 'Nunito', sans-serif;
   }
   .decor-line {
     height: 3px;
-    width: 25%;
+    width: 35%;
     background-color: $black;
     float: left;
     margin-top: 40px;
@@ -157,7 +159,8 @@ $f-text: 'Nunito', sans-serif;
      margin-left: 0;
    }
    .nav-links {
-     margin: auto;
+     display: flex;
+     justify-content: center;
    }
  }
 
@@ -269,6 +272,45 @@ $f-text: 'Nunito', sans-serif;
      font-weight: 700;
    }
  }
+
+ .current {
+   font-style: normal;
+   background-color: $blue;
+   color: $white;
+   padding: 2px 8px;
+   border: 1px solid $blue;
+   border-radius: 2px;
+   margin: auto 5px;
+ }
+
+.pagination {
+  justify-content: center;
+  margin-top: 30px;
+  width: 100%;
+  a[rel="next"], a[rel="prev"], .previous_page, .next_page {
+    font-style: normal;
+    color: $blue;
+    padding: 2px 8px;
+    border: 1px solid $blue;
+    border-radius: 2px;
+    margin: auto 5px;
+    text-decoration: none;
+    transition: all ease-out 300ms;
+  }
+  a[rel="next"]:hover, a[rel="prev"]:hover, .previous_page:hover, .next_page:hover {
+    background-color: $blue;
+    color: $white;
+  }
+  .disabled {
+    color: rgba(0,0,0,0.4);
+    border: 1px solid rgba(0,0,0,0.4);
+  }
+  .disabled:hover {
+    color: rgba(0,0,0,0.4);
+    border: 1px solid rgba(0,0,0,0.4);
+    background-color: transparent;
+  }
+}
 
  .post-summary {
    font-size:0.8em;
