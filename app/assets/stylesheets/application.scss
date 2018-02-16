@@ -39,6 +39,19 @@ $f-text: 'Nunito', sans-serif;
    padding: 0;
  }
 
+::-moz-selection {
+  color: $blue;
+}
+::selection {
+  color: $blue;
+}
+::-moz-selection {
+  background: $light-blue;
+}
+::selection {
+  background: $light-blue;
+}
+
  .page-container {
       padding: 70px 100px;
  }
@@ -70,10 +83,11 @@ $f-text: 'Nunito', sans-serif;
   }
   .decor-line {
     height: 3px;
-    width: 35%;
+    width: 33%;
     background-color: $black;
     float: left;
     margin-top: 40px;
+    margin-left: 0;
   }
 }
 
@@ -142,6 +156,10 @@ $f-text: 'Nunito', sans-serif;
    background-color: $black;
    height: 40px;
    z-index: 1;
+   ul {
+     margin: 0;
+     padding: 0;
+   }
    .nav-link {
      a {
        color: $white;
@@ -287,7 +305,7 @@ $f-text: 'Nunito', sans-serif;
   justify-content: center;
   margin-top: 30px;
   width: 100%;
-  a[rel="next"], a[rel="prev"], .previous_page, .next_page {
+  a, .previous_page, .next_page {
     font-style: normal;
     color: $blue;
     padding: 2px 8px;
@@ -297,17 +315,17 @@ $f-text: 'Nunito', sans-serif;
     text-decoration: none;
     transition: all ease-out 300ms;
   }
-  a[rel="next"]:hover, a[rel="prev"]:hover, .previous_page:hover, .next_page:hover {
+  a:hover, .previous_page:hover, .next_page:hover {
     background-color: $blue;
     color: $white;
   }
   .disabled {
-    color: rgba(0,0,0,0.4);
-    border: 1px solid rgba(0,0,0,0.4);
+    color: rgba(0,0,0,0.3);
+    border: 1px solid rgba(0,0,0,0.3);
   }
   .disabled:hover {
-    color: rgba(0,0,0,0.4);
-    border: 1px solid rgba(0,0,0,0.4);
+    color: rgba(0,0,0,0.3);
+    border: 1px solid rgba(0,0,0,0.3);
     background-color: transparent;
   }
 }
