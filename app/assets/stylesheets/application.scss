@@ -476,3 +476,18 @@ footer {
     color: $white;
   }
 }
+
+
+/* === DEVISE STYLING === */
+.field {
+  margin-bottom: 20px;
+  input {
+    width: 40%;
+    clear: both;
+  }
+}
+
+.notice {
+  font-size: .8em;
+  margin: 5px 30px;
+}

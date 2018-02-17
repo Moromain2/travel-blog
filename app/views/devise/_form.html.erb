@@ -1,0 +1,25 @@
+<%= form_for @post, html: { multipart: true } do |f| %>
+  <% if @post.errors.any? %>
+    <h3><%= pluralize(@posts.errors.count, "erreurs") %> ont empêché la sauvegarde de cet article 😥</h3>
+    <ul>
+      <%= @posts.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <%= f.label :title, 'Choisis un titre' %> <br>
+  <%= f.text_field :title %> <br>
+  <br>
+
+  <%= f.label :image, 'Une belle image d\'illustration' %> <br>
+  <%= f.file_field :image %> <br>
+  <br>
+
+  <%= f.label :content, "Rédige ton article ici" %> <br>
+  <%= f.text_area :content %> <br>
+  <br>
+
+  <%= f.submit 'Publier le contenu', :class => 'action-btn no-margin' %>
+
+<% end %>

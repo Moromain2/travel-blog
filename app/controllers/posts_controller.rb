@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_admin!, except: [:index, :show, :welcome]
 
   def welcome
     @posts = Post.all.order("created_at desc").offset(1)
