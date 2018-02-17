@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :posts
   root to: 'posts#welcome'
   get 'admin/sign_up'
+  get '*path' => redirect('/')
 end

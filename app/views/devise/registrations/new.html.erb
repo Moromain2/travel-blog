@@ -1,4 +1,7 @@
-<%= render 'navbar' %>
+<% if admin_signed_in? %>
+  <%= render 'admin-nav' %>
+<% end %>
+
 <div class="page-container">
 
   <h2>Sign up</h2>

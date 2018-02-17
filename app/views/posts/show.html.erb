@@ -1,4 +1,6 @@
-<%= render 'admin-nav' %>
+<% if admin_signed_in? %>
+  <%= render 'admin-nav' %>
+<% end %>
 
 <%= render 'navbar' %>
 
@@ -10,8 +12,10 @@
 
   <p><%= @post.content %></p><br>
   <br>
-  <%= link_to "Editer l'article", edit_post_path(@post), :class => 'admin-btn no-margin' %>
-  <%= link_to "Supprimer l'article", post_path(@post), method: :delete, data: { confirm: "Veux tu vraiment supprimer cet article ? " }, :class => 'admin-btn danger-btn' %>
+  <% if admin_signed_in? %>
+    <%= link_to "Editer l'article", edit_post_path(@post), :class => 'admin-btn no-margin' %>
+    <%= link_to "Supprimer l'article", post_path(@post), method: :delete, data: { confirm: "Veux tu vraiment supprimer cet article ? " }, :class => 'admin-btn danger-btn' %>
+  <% end %>
 
 </div>
 

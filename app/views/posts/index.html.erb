@@ -1,4 +1,6 @@
-<%= render 'admin-nav' %>
+<% if admin_signed_in? %>
+  <%= render 'admin-nav' %>
+<% end %>
 
 <%= render 'navbar' %>
 
@@ -19,8 +21,6 @@
             <p class="post-summary"><%= post.content.first(200) %>...</p>
             <p class="date"><span>Publié le :</span> <%= post.created_at.strftime("%A, %b %d") %></p>
             <%= link_to 'Lire', post, :class => 'action-btn no-margin' %>
-            <a href="#" class="admin-btn">Modifier</a>
-            <a href="#" class="admin-btn danger-btn">Supprimer</a>
           </div>
 
     <% end %>
